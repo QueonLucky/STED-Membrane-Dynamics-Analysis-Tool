@@ -1,7 +1,7 @@
 # STED-Membrane-Dynamics-Analysis-Tool
 A MATLAB-based image processing pipeline for analyzing fluorescence dynamics in STED microscopy videos of cell membranes. The tool extracts temporal fluctuations, wave propagation speeds, and spatial activity patterns from time-lapse stacks.
 
-Features
+# Features
 Automated preprocessing – background subtraction, photobleaching correction, and 3D Gaussian filtering
 
 Global dynamics analysis – average intensity trends, detrended fluctuations, and power spectrum (periodogram)
@@ -16,7 +16,7 @@ Optical flow – Farneback method for pixel-wise velocity fields
 
 PCA decomposition – identify dominant spatiotemporal modes with explained variance
 
-Requirements
+# Requirements
 MATLAB R2019b or later
 
 Image Processing Toolbox
@@ -27,7 +27,7 @@ Statistics and Machine Learning Toolbox
 
 Computer Vision Toolbox (for optical flow)
 
-Input
+# Input
 A multi-frame TIFF file (e.g., membrane.tif) containing a time-lapse STED image stack.
 Parameters to set inside the script:
 
@@ -35,7 +35,7 @@ time_interval – time between frames (seconds)
 
 pixel_size – physical pixel size (µm)
 
-Output
+# Output
 Figures generated during execution:
 
 Photobleaching fit and corrected intensity curve
@@ -62,7 +62,7 @@ PCA cumulative variance and top spatial modes
 
 Command-line outputs include background intensity, dominant oscillation frequency, and estimated wave propagation speed (pixel/s and µm/s).
 
-Usage
+# Usage
 Place your STED time-lapse TIFF in the same folder as the script.
 
 Adjust filename, time_interval, and pixel_size at the top of membrane_analysis_for_STED.m.
@@ -71,7 +71,7 @@ Run the script in MATLAB.
 
 When prompted, draw a freehand line on the displayed image and double-click to generate a kymograph.
 
-Example
+# Example
 matlab
 filename = 'membrane.tif';
 time_interval = 0.5;   % 2 fps
@@ -83,8 +83,8 @@ Photobleaching is fitted with a double-exponential (exp2) model.
 
 For the Radon-based velocity estimation, the kymograph is assumed to have diagonal stripes whose angle corresponds to wave speed.
 
-License
+# License
 MIT – feel free to use and modify for your research.
 
-Author
+# Author
 Developed for STED membrane dynamics analysis.
